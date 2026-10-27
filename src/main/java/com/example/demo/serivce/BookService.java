@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.Repo.BookRepo;
+import com.example.demo.dto.BookDto;
 import com.example.demo.entity.Book;
 
 @Service
@@ -40,5 +41,13 @@ public class BookService {
 
     public void removed(Long id) {
         bookRepo.deleteById(id);
+    }
+    public Book createBook(BookDto bookDTO) {
+
+        Book book = new Book();
+
+        book.setName(bookDTO.getName());
+
+        return bookRepo.save(book);
     }
 }

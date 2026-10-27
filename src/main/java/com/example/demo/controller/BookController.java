@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.dto.BookDto;
 import com.example.demo.entity.Book;
 import com.example.demo.serivce.BookService;
+
+import jakarta.validation.Valid;
+
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -35,10 +39,9 @@ public Book putBook(@PathVariable Long id, @RequestBody Book book) {
 	return bookService.updateBook(book, id);	
 }
 @PostMapping
-public Book postMethodName(@RequestBody Book book) {
-   
-    
-    return  bookService.createBook(book);
+public Book addBook(@Valid @RequestBody BookDto bookDTO) {
+
+    return bookService.createBook(bookDTO);
 }
 @DeleteMapping("/{id}")
 public void removeBook(@PathVariable Long id) {
