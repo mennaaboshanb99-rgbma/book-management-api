@@ -39,3 +39,19 @@ A RESTful API project for managing books, built using Java and Spring Boot.
 ## Author
 
 Menna Aboshanab
+## API Testing
+
+### Add Book
+![Add Book](screenshots/POST-Add-Book.png)
+
+### Get All Books
+![Get All Books](screenshots/GET-All-Books.png)
+
+### Get Book By ID
+![Get Book By ID](screenshots/GET-Book-By-ID.png)
+
+### Update Book
+![Update Book](screenshots/PUT-Update-Book.png)
+
+### Delete Book
+![Delete Book](screenshots/DELETE-Book.png)
